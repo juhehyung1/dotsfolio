@@ -12,41 +12,32 @@ html{
 body{
     background-color: black;
     overflow-x: hidden;
-    /* overflow-y: hidden; */
   }
-
-  /* common */
-  .inner{
+.inner{
     max-width: 75%;
     margin: 0 auto;
 }
 .blind{
     display: none;
 }
-/* .overflowhidden{
-    overflow-y: hidden;
-} */
-/* input (html)에 입력된 value 값으로 인트로 텍스트 형성 */
 input{
   display: none;
 }
 
 body::-webkit-scrollbar {
     width: 15px;
-  }
-  body::-webkit-scrollbar-thumb {
+}
+ body::-webkit-scrollbar-thumb {
     background-color: #ffffff;
     border-radius: 10px;
     background-clip: padding-box;
     border: 2px solid transparent;
-  }
-  body::-webkit-scrollbar-track {
+}
+body::-webkit-scrollbar-track {
     background-color: rgb(0, 0, 0);
   }
   
-
 /* ------------------------------------header--------------------------------------- */
-/* header opacity 0 -> 1 (delay) */
 header {
     font-family: 'Manrope', sans-serif;
     z-index: 1;
@@ -55,9 +46,9 @@ header {
     width: 100%;
     background-color: rgb(0, 0, 0);
     opacity: 0;
+    z-index: 99;
 }
 header #gnb {
-    /* border: 1px solid red; */
     float: right;
     margin-top: 30px;   
 }
@@ -65,7 +56,6 @@ header #gnb>li {
        display: inline-block;
    }
 header #gnb>li>a{
-    /* border: 1px solid white; */
     font-weight: 700;
     font-size: 1.313rem;
     margin-left: 100px;
@@ -73,12 +63,10 @@ header #gnb>li>a{
 
 /* 로고 */
 header #areaLogo{
-
     float: left;
     margin-top: 15px;
 }
 header .ico a{
-    /* border: 1px solid red; */
     font-weight: 900;
     font-size: 2.37rem;
     margin-left: 40px;
@@ -87,8 +75,6 @@ header .ico a{
     position: relative;
 }
 header .ico a:hover{
-    /* color: white; */
-    /* display: inline-block; */
     color: white;
     cursor: pointer;
     text-shadow: 0px 0px 10px #FFF, 0px 2px 10px rgba(255, 255, 255, 0.1), 0px -2px 10px rgba(255, 255, 255, 0.1), -2px 0px 10px rgba(255, 255, 255,0.1), 2px 0px 10px rgba(255, 255, 255, 0.1);
@@ -102,27 +88,18 @@ nav li a{
 }
 nav li a:hover{
     text-decoration: none;
-    /* color: rgb(255, 255, 255); */
     color: white;
     display: inline-block;
-            color: white;
-            cursor: pointer;
-            text-align: center;
-            text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.514), 0px 2px 10px rgba(255, 255, 255, 0.1), 0px -2px 10px rgba(255, 255, 255, 0.1), -2px 0px 10px rgba(255, 255, 255,0.1), 2px 0px 10px rgba(255, 255, 255, 0.1);
-            transition: all 0.4s ease;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.514), 0px 2px 10px rgba(255, 255, 255, 0.1), 0px -2px 10px rgba(255, 255, 255, 0.1), -2px 0px 10px rgba(255, 255, 255,0.1), 2px 0px 10px rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
 }
 
 
-
-/* 스크롤 메뉴 */
-/* .scroll_01{  
-    background-color: #ffefe400;
-} */
-/* 아래로 스크롤하면 배경이 사라지고 위로 스크롤 하면 배경이 생깁니다. */
 .scroll_01{    
-    /* border-bottom: 1px solid red; */
     height: 80px;
-
     position:fixed;
     left:50%;
     width:100%;
@@ -131,22 +108,18 @@ nav li a:hover{
     transform:translate(-50%);
     transition:all .3s
 }
-
 .work_dots a{
   opacity: 0;
   border-radius: 50px;
   padding: 10px 5px;
-writing-mode: vertical-rl;
-text-orientation: upright;
-/* display: fixed; */
-/* position:fixed; */
-position: fixed; /* Fixed/sticky position */
-bottom: 43%; /* Place the button at the bottom of the page */
-right: 30px; /* Place the button 30px from the right */
-/* z-index: 99; / */
-text-decoration: none;
-font-size: 1.3rem;
-font-weight: 600;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  position: fixed; 
+  bottom: 43%; 
+  right: 30px; 
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 .towhite{
   border: 2px solid rgb(255, 255, 255);
@@ -159,94 +132,41 @@ font-weight: 600;
 /* ------------------------------------main_section--------------------------------------- */
 .main_Section{
     z-index: 2;
-    /* border: 1px solid green; */
 }
-
 
 /* ------------------------------------background_section--------------------------------------- */
 .background_Section{
-    /* border: 1px solid yellow; */
     margin-top: -900px;
     height: 900px;
     z-index: -1;
     opacity: 0;
 }
-/* .square {
-    margin-left: 1000px;
-    margin-top: 300px;
-    width: 100px;
-    height: 100px;
-    border:1px solid rgb(255, 255, 255);
-    transform: rotate( 340deg );
-  } */
-  /* .circle {
-      margin-top: -50px;
-      margin-left: 100px;
-    width: 130px;
-    height: 130px;
-    border:2px solid rgb(255, 255, 255);
-    border-radius: 50%
-  }
-
-  .tri{
-      margin-left: 1400px;
-      margin-top: -200px;
-      transform: rotate( 320deg );
-  }
-  .triangle:after {
-    position:absolute;
-    content:"";
-    width: 0;
-    height: 0;
-    margin-top:1px;
-    margin-left:2px;
-    border-left: 48px solid transparent;
-    border-right:48px solid transparent;
-    border-bottom: 68px solid rgb(0, 0, 0);
-}
-
-.triangle:before {
-    position:absolute;
-    content:"";
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 70px solid rgb(255, 255, 255);
-}
- */
 
 /* ------------------------------------slogan_Section--------------------------------------- */
 .slogan_Section{
-    /* border: 1px solid red; */
     text-align: center;
     height: 950px;
     margin-top: 100px;
 }
 .slogan_Section .text{
-    /* border: 1px solid red; */
     margin-top: 280px;
 }
 .slogan_Section .text h3{
     color: white;
     font-size: 3rem;
     display: inline-block;
-            color: white;
-            cursor: pointer;
-            text-align: center;
-            text-shadow: 0px 0px 10px rgb(255, 255, 255), 0px 2px 10px rgba(30, 98, 224, 0.3), 0px -2px 10px rgba(30, 98, 224, 0.3), -2px 0px 10px rgba(30, 98, 224, 0.3), 2px 0px 10px rgba(30, 98, 224, 0.3);
-            transition: all 0.4s ease;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    text-shadow: 0px 0px 10px rgb(255, 255, 255), 0px 2px 10px rgba(30, 98, 224, 0.3), 0px -2px 10px rgba(30, 98, 224, 0.3), -2px 0px 10px rgba(30, 98, 224, 0.3), 2px 0px 10px rgba(30, 98, 224, 0.3);
+    transition: all 0.4s ease;
 }
-/* .slogan_Section .text h3:hover{
-    font-size: 3.5em;
-} */
 .slogan_Section .text p{
   margin-top: 60px;
 }
 .sl_p_one, .sl_p_two, .sl_p_three{
    opacity: 0;
     margin-top: -10px;
-    /* border: 1px solid red; */
     color: rgb(190, 190, 190);
     font-size: 1.5rem;
     font-weight: 500;
@@ -255,7 +175,6 @@ font-weight: 600;
 .sizeUp{
   animation: sizeUp 1s forwards;
 }
-
 @-webkit-keyframes sizeUp {
   0% {
     font-size: 3rem;
@@ -267,9 +186,7 @@ font-weight: 600;
 }
 
 /* ------------------------------------works--------------------------------------- */
-
 .work_all {
-  /* border: 1px solid red; */
   margin-top: 150px;
   height: 100vh;
 }
@@ -279,7 +196,6 @@ font-weight: 600;
 .work_all h1 {
   opacity: 0;
   margin-bottom: 50px;
-  /* margin-top: 30px; */
   padding-top: 90px;
   color: white;
   text-align: center;
@@ -288,46 +204,13 @@ font-weight: 600;
   font-weight: 800;
   text-shadow: 0px 0px 10px rgb(255, 255, 255), 0px 2px 10px rgba(30, 98, 224, 0.3), 0px -2px 10px rgba(30, 98, 224, 0.3), -2px 0px 10px rgba(30, 98, 224, 0.3), 2px 0px 10px rgba(30, 98, 224, 0.3);
 }
-/* .work_all .container{
-  height: 10px;
-  display: flex;
-
-  width: 100%;
-} */
-/* .work_all .container .works{
-  position: relative;
-  background-size: cover;
-} */
 .works img{
-  /* border: 1px solid red; */
-  /* opacity: 0; */
-  /* top: 120px; */
   position:  absolute;
   width: 540px;
   height: 300px;
    border-radius:10px;
    cursor: pointer;
 }
-/* .works img:hover{
-  opacity: 0.5;
-} */
-.works img:hover{
-  /* border: 5px solid yellow; */
-  /* opacity: 0.5;
-  transition: all 0.4s ease; */
-  /* opacity: 0.5; 
-  transition: all 0.4s ease; */
-}
-/* .works .doodle img{
-  left: 100px;
-  position: absolute;
-}
-.works .caremate img{
-  left: 675px;
-}
-.works .roudding img{
-  left: 1250px;
-} */
 .work_all img {
   vertical-align: top;
 }
@@ -380,16 +263,15 @@ font-weight: 600;
   border-radius: 50%;
   padding: 40px 30px;
 }
-
-/* .work_all .doodle_text{
-  display: flex;
-  flex-direction: column;
-} */
 .text_container{
   display: flex;
   margin-top: 40px;
-  /* border: 1px solid red; */
-
+}
+.work_all .text_container p {
+  color: rgba(255, 255, 255, 0.938);
+}
+.work_all .text_container p strong{
+  color: rgba(255, 255, 255, 0.712);
 }
 .work_all .doodle_text h3{
   margin-left: 65px;
@@ -407,7 +289,6 @@ font-weight: 600;
 .work_all .doodle_text p{
   margin-left: 65px;
   font-size: 1.15rem;
-  color: rgba(255, 255, 255, 0.911);
   line-height: 1.6rem;
     width: 535px;
 }
@@ -427,7 +308,6 @@ font-weight: 600;
 .work_all .caremate_text p{
   margin-left: 65px;
   font-size: 1.15rem;
-  color: rgba(255, 255, 255, 0.911);
   line-height: 1.6rem;
     width: 535px;
 }
@@ -447,262 +327,13 @@ font-weight: 600;
 .work_all .roudding_text p{
   margin-left: 65px;
   font-size: 1.15rem;
-  color: rgba(255, 255, 255, 0.911);
   line-height: 1.6rem;
     width: 535px;
 }
 
-
-/* .works p{
- 
-  position: relative;
-  padding: 30px 20px 37px 20px;
-  text-align: center;
-  color: white;
-  font-size: 2rem;
-  font-weight: 700;
-  border: 4px solid white;
-  border-radius: 50%;
-  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7), 0px 2px 10px rgba(30, 98, 224, 0.3), 0px -2px 10px rgba(30, 98, 224, 0.3), -2px 0px 10px rgba(30, 98, 224, 0.3), 2px 0px 10px rgba(30, 98, 224, 0.3);
-}
-.works .doodle p{
-  left: 260px;
-  top: 140px;
-  opacity: 0;
-}
-.work .doodle img:hover p{
-  opacity: 1;
-} */
-/* .doodle img:hover{
-  transition: all 0.4s ease;
-  opacity: 0.3;
-}
-.caremate img:hover{
-  transition: all 0.4s ease;
-  opacity: 0.3;
-}
-.roudding img:hover{
-  transition: all 0.4s ease;
-  opacity: 0.3;
-} */
-/* .works .text{
-  border: 1px solid red;
-  color: rgba(255, 255, 255, 0);
-  position: relative;
-  font-size: 2rem;
-  font-weight: 800;
-  text-align: left;
-  width: 500px;
-  height: 160px;
-  padding-top: 150px;
-  padding-left: 50px;
-  text-align: center;
-}
-.work_all a{
-  text-decoration: none;
-}
-.doodle .text{
-  left: 98px;
-  bottom: 560px;
-}
-.caremate .text{
-  left: 673px;
-  bottom: 250px;
-
-}
-.roudding .text{
-  top: 63px;
-  left: 1245px;
-}
-.works .text small{
-  font-weight: 500;
-}
-.doodle a:hover {
-  background-color: rgba(0, 0, 0, 0.589);
-  transition: all 0.4s ease;
-  color: white;
-  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7), 0px 2px 10px rgba(30, 98, 224, 0.3), 0px -2px 10px rgba(30, 98, 224, 0.3), -2px 0px 10px rgba(30, 98, 224, 0.3), 2px 0px 10px rgba(30, 98, 224, 0.3);
-}
-.caremate a:hover{
-  background-color: rgba(0, 0, 0, 0.589);
-  transition: all 0.4s ease;
-  color: white;
-  text-shadow: 0px 0px 10px rgb(0, 0, 0, 0.7), 0px 2px 10px rgba(30, 98, 224, 0.3), 0px -2px 10px rgba(30, 98, 224, 0.3), -2px 0px 10px rgba(30, 98, 224, 0.3), 2px 0px 10px rgba(30, 98, 224, 0.3);
-}
-.roudding a:hover{
-  background-color: rgba(0, 0, 0, 0.589);
-  transition: all 0.4s ease;
-  color: white;
-  text-shadow: 0px 0px 10px rgb(0, 0, 0, 0.7), 0px 2px 10px rgba(30, 98, 224, 0.3), 0px -2px 10px rgba(30, 98, 224, 0.3), -2px 0px 10px rgba(30, 98, 224, 0.3), 2px 0px 10px rgba(30, 98, 224, 0.3);
-} */
-
-
-/* .rouddingani{
-  transform: translate(500px, -300px);
-  opacity: 1;
-
-}
-.caremateani{
-  transform: translate(-500px, 300px);
-  opacity: 1;
-}
-.doodleani{
-  transform: translate(500px, 300px);
-  opacity: 1;
-} */
-/* #container
-{
-
-height: 1000px;
-width: 100%;
-
-overflow: hidden;
-position: relative;
-
-}
-
-#thumbs
-{
-
-position: absolute;
-top: 0px;
-left: 0px;
-
-width: auto;
-overflow: hidden;
-white-space: nowrap;
-
-}
-
-#thumbs div
-{
-  margin: 0 50px;
-  display: inline-block;
-  text-align: center;
-  font-size:3em;
-  font-weight: bold;
-  color: #FFF;
-} */
-
-
-  /* ------------------------------------work--------------------------------------- */
-  /* .work{
-   
-    height: 1000px;
-    text-align: center;
-    margin-top: 400px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    font-family: 'Manrope', sans-serif;
-    color: white;
-    font-size: 5em;
-    font-weight: 800;
-    text-transform: uppercase;
-    text-shadow: 0px 0px 10px rgb(255, 255, 255), 0px 2px 10px rgba(30, 98, 224, 0.3), 0px -2px 10px rgba(30, 98, 224, 0.3), -2px 0px 10px rgba(30, 98, 224, 0.3), 2px 0px 10px rgba(30, 98, 224, 0.3);
-  }
-  .work_text{
-    margin-top: -1000px;
-    color: rgba(255, 255, 255, 0.719);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    font-family: 'Manrope', sans-serif;
-    font-size: 3em;
-    font-weight: 700;
-    opacity: 0;
-
-  }
-
- .work_up{
-    animation: up 1s ease-in;
-    animation-fill-mode: forwards;
-
-    width: 25%;
-    cursor: pointer;
-  }
-     @keyframes up{ 
-       0%{
-        transform: translate(0, 0) scale(0);
-        opacity: 0;
-       }
-       100% { 
-         transform: translate(-350px, -100px) scale(1);
-         opacity: 1;
-       } 
-      }
-.work_up:hover{
-  color: white;
-  text-shadow: 0px 0px 10px rgb(255, 255, 255), 0px 2px 10px rgba(30, 98, 224, 0.3), 0px -2px 10px rgba(30, 98, 224, 0.3), -2px 0px 10px rgba(30, 98, 224, 0.3), 2px 0px 10px rgba(30, 98, 224, 0.3);
-}
-  .work_roudding {
-    animation: roudding 1s ease-in;
-    animation-fill-mode: forwards;
-    cursor: pointer;
-  }
-  .work_roudding:hover{
-    color: white;
-    text-shadow: 0px 0px 10px rgb(255, 255, 255), 0px 2px 10px rgba(30, 98, 224, 0.3), 0px -2px 10px rgba(30, 98, 224, 0.3), -2px 0px 10px rgba(30, 98, 224, 0.3), 2px 0px 10px rgba(30, 98, 224, 0.3);
-  }
-  @keyframes roudding{ 
-    0%{
-     transform: translate(0, 0) scale(0);
-     opacity: 0;
-    }
-    100% { 
-      transform: translate(350px, -150px) scale(1);
-      opacity: 1;
-    } 
-   }
- .work_caremate {
-    animation: caremate 1s ease-in;
-    animation-fill-mode: forwards;
-    cursor: pointer;
-  }
-  .work_caremate:hover{
-    color: white;
-    text-shadow: 0px 0px 10px rgb(255, 255, 255), 0px 2px 10px rgba(30, 98, 224, 0.3), 0px -2px 10px rgba(30, 98, 224, 0.3), -2px 0px 10px rgba(30, 98, 224, 0.3), 2px 0px 10px rgba(30, 98, 224, 0.3);
-  }
-  @keyframes caremate{ 
-    0%{
-     transform: translate(0, 0) scale(0);
-     opacity: 0;
-    }
-    100% { 
-      transform: translate(-350px, 200px) scale(1);
-      opacity: 1;
-    } 
-   }
-.work_doodle {
-    animation: doodle 1s ease-in;
-    animation-fill-mode: forwards;
-    cursor: pointer;
-  }
-  .work_doodle:hover{
-    color: white;
-    text-shadow: 0px 0px 10px rgb(255, 255, 255), 0px 2px 10px rgba(30, 98, 224, 0.3), 0px -2px 10px rgba(30, 98, 224, 0.3), -2px 0px 10px rgba(30, 98, 224, 0.3), 2px 0px 10px rgba(30, 98, 224, 0.3);
-  }
-  @keyframes doodle{ 
-    0%{
-     transform: translate(0, 0) scale(0);
-     opacity: 0;
-    }
-    100% { 
-      transform: translate(350px, 200px) scale(1);
-      opacity: 1;
-    } 
-   }
-
-    */
-
-
 /* ------------------------------------profile--------------------------------------- */
 .profile_Section {
     margin-top: 200px;
-    /* border: 1px solid red; */
     height: 950px;
 }
 .profile_Section h2{
@@ -731,7 +362,6 @@ white-space: nowrap;
   transform: rotate( 45deg );
   margin-top: -486px;
   margin-left: -1px;
-  /* animation: rotate_square 8s linear infinite; */
 }
 
  @keyframes rotate_square{ 
@@ -775,7 +405,6 @@ white-space: nowrap;
   font-weight: 900;
   text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.05), 0px 2px 10px rgba(30, 98, 224, 0.05), 0px -2px 10px rgba(30, 98, 224, 0.05), -2px 0px 10px rgba(30, 98, 224, 0.05), 2px 0px 10px rgba(30, 98, 224, 0.05);
 }
-
 .profile_Section .text .dot_profile{
   display: flex;
   margin-top: -150px;
@@ -786,7 +415,6 @@ white-space: nowrap;
   border-radius: 50%;
   background-color: rgb(0, 0, 0);
   margin-left:10px;
-  /* margin-top: -20px; */
 }
 .profile_Section .text .dot_2{
   width: 8px;
@@ -803,7 +431,6 @@ white-space: nowrap;
   background-color: rgb(0, 0, 0);
   margin-left:35px;
   margin-top: 75px;
-  /* margin-top: -23px; */
 }
 .profile_Section .text .dot_4{
   width: 8px;
@@ -812,13 +439,10 @@ white-space: nowrap;
   background-color: rgb(0, 0, 0);
   margin-left:35px;
   margin-top: 75px;
-  /* margin-top: -3px; */
 }
 .text .dot_profile{
   animation: dot_profile 0.7s linear infinite;
-  /* animation-fill-mode: backwards; */
 }
-  
    @keyframes dot_profile{ 
      0%{
       transform: translateY(-10px);
@@ -842,7 +466,7 @@ white-space: nowrap;
   line-height: 2rem;
   margin-bottom: 10px;
   font-weight: 700;
-  border-bottom: 3px dotted rgb(255, 255, 255);
+  border-bottom: 3px dotted rgb(0, 0, 0);
   display: inline-block;
 }
 .profile_Section .text li p{
@@ -852,11 +476,10 @@ white-space: nowrap;
 
 /* ------------------------------------skill--------------------------------------- */
 .skill {
-    /* padding: 50px 0; */
     text-align: center;
     margin-top: 100px;
     margin-bottom: 100px;
-  }
+}
   .skill h2{
    opacity: 0;
    margin-bottom: 100px;
@@ -870,7 +493,6 @@ white-space: nowrap;
     text-align: center;
     margin-left: 140px;
   }
-  
   .chart figcaption {
     padding: 50px 25px;
     width: 130px;
@@ -879,7 +501,6 @@ white-space: nowrap;
     border-radius: 130px;
     line-height: 80px;
   }
-  
   .chart img {
     position: absolute;
     max-width: 80px;
@@ -894,32 +515,26 @@ white-space: nowrap;
   top: 50px;
   left: 50px;
 }
-  /* Colors for the circles and positions for the graphics */
   .html {
     top: 50px;
     left: 45px;
   }
-  
   .html + svg .outer {
     stroke: #e34f26;
   }
-  
   .css {
     top: 55px;
     left: 48px;
   }
-  
   .css + svg .outer {
     stroke: #0d84ce;
   }
-  
   .javascript {
     max-width: 90px;
     max-height: 90px;
     top: 45px;
     left: 45px;
   }
-  
   .javascript + svg .outer {
     stroke: #f0e040;
   }
@@ -927,27 +542,21 @@ white-space: nowrap;
     top: 55px;
     left: 48px;
   }
-  
   .illustrator + svg .outer {
     stroke: #FF9A00;
   }
-  
   .photoshop {
     top: 55px;
     left: 48px;
   }
-  
   .photoshop + svg .outer {
     stroke: #31A8FF;
   }
-
-  
   .chart svg {
     position: absolute;
     top: 0;
     left: 0;
   }
-  
   .outer {
     fill: transparent;
     stroke: #333;
@@ -958,33 +567,6 @@ white-space: nowrap;
     -moz-transform: rotate(-89deg) translateX(-190px);
   }
   
-
-  .chart.full .outer{
-    stroke-dashoffset: 0;
-    -webkit-animation: show100 2s;
-    animation: show100 2s;
-  }
-  
-  .chart.eighty .outer{
-    stroke-dashoffset: 90;
-    -webkit-animation: show80 2s;
-    animation: show80 2s;
-  }
-  
-  .chart.seventy .outer {
-    stroke-dashoffset: 220;
-    -webkit-animation: show70 2s;
-    animation: show70 2s;
-  }
-  
-  .chart.ninety .outer {
-    stroke-dashoffset: 50;
-    -webkit-animation: show90 2s;
-    animation: show90 2s;
-  }
-  /* END set initial animation values */
-  
-  /* Keyframes for the initial animation */
   @-webkit-keyframes show100 {
     from {
       stroke-dashoffset:665;
@@ -994,7 +576,6 @@ white-space: nowrap;
       stroke-dashoffset: 0;
     }
   }
-  
   
   @-webkit-keyframes show80 {
     from {
@@ -1006,7 +587,6 @@ white-space: nowrap;
     }
   }
   
-  
   @-webkit-keyframes show70 {
     from {
       stroke-dashoffset:665;
@@ -1016,7 +596,6 @@ white-space: nowrap;
       stroke-dashoffset:220;
     }
   }
-  
   
   @-webkit-keyframes show90 {
     from {
@@ -1028,35 +607,18 @@ white-space: nowrap;
     }
   }
   
-
     /* ------------------------------------contact--------------------------------------- */
     .contact{
       margin-top: 400px;
-      /* border: 1px solid red; */
       height: 75vh;
     }
-    /* .contact marquee {
-      color: rgba(255, 255, 255, 0.767);
-      margin-top: 100px;
-      font-size: 2.5rem;
-      font-weight: 3rem;
-      line-height: 8.5rem;
-      font-weight: 800;
-      letter-spacing: 2px;
-    }
-    .contact marquee h1 strong{
-      color: white;
-      font-size: 4.5rem;
-    } */
     .contact .container{
-      /* border: 1px solid red; */
       text-align: center;
       display: flex;
-    justify-content: center;
-    align-items: center;
-    /* min-height: 100vh; */
-    text-align: left;
-    color: white;
+      justify-content: center;
+      align-items: center;
+      text-align: left;
+      color: white;
     }
     .contact .container p{
       color: rgba(255, 255, 255, 0.767);
@@ -1079,7 +641,7 @@ white-space: nowrap;
       background-color: white;
       border-radius: 50%;
       animation: dotn 1s ease-in;
-    animation-fill-mode: forwards;
+     animation-fill-mode: forwards;
     }
     .contact .container ul li{
       color: rgba(255, 255, 255, 0.781);
@@ -1111,13 +673,11 @@ white-space: nowrap;
       border: 1px solid white;
       height: 500px; 
       margin: 0 200px;
-      /* margin-right: 100px; */
     }
 
     .dotn{
       animation: dotn 0.5s ease-in-out;
     }
-      
        @keyframes dotn{ 
          0%{
            opacity: 0;
@@ -1139,98 +699,6 @@ white-space: nowrap;
 
          } 
         }
-    /* .contact{
-      margin-top: 300px;
-      border: 1px solid rgb(179, 255, 0);
-
-      width: 100vw;
-    }
-    .contact .container{
-      border: 1px solid red;
-      text-align: center;
-      display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    text-align: left;
-    }
-
- 
-    .contact h1{
-      border: 1px solid red;
-      color: rgba(255, 255, 255, 0.678);
-
-      margin-top: -100px;
-      font-size: 3em;
-      font-weight: 500;
-      word-spacing:3px;
-   }
-   .contact h1 strong{
-    color: #fff;
-    font-size: 1.1em;
-    font-weight: 600;
-    text-shadow: 0px 0px 10px rgb(255, 255, 255), 0px 2px 10px rgba(255, 255, 255, 0.3), 0px -2px 10px rgba(255, 255, 255, 0.3), -2px 0px 10px rgba(255, 255, 255, 0.3), 2px 0px 10px rgba(255, 255, 255, 0.3);
- } */
-    /* .contact .how{
-      margin-right: -300px;
-    }
-    .contact .how h2{
-      color: #fff;
-      font-size: 2em;
-      line-height: 2.5em;
-    }
-    .contact .how a{
-      margin-left: 50px;
-      text-decoration: none;
-      color: rgba(255, 255, 255, 0.767);
-      font-size: 0.8em;
-      font-weight: 500;
-    }
-    .contact .how a:hover{
-      color: white;
-      text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.15), 0px 2px 10px rgba(255, 255, 255, 0.1), 0px -2px 10px rgba(255, 255, 255, 0.1), -2px 0px 10px rgba(255, 255, 255,0.1), 2px 0px 10px rgba(255, 255, 255, 0.1);
-    } */
-
-    /* .dot1{
-      background-color: rgba(255, 255, 255, 0.781);
-      width:10px;
-      height:10px;
-      border-radius: 50px;
-      margin-top: -675px;
-      margin-left: 465px;
-    }
-    .dot2{
-      background-color: rgb(255, 255, 255);
-      width:10px;
-      height:10px;
-      border-radius: 50px;
-      margin-top: 65px;
-      margin-left: 710px;
-    }
-    .dot3{
-      background-color: rgb(255, 255, 255);
-      width:10px;
-      height:10px;
-      border-radius: 50px;
-      margin-top: -10px;
-      margin-left: 760px;
-    }
-    .dot4{
-      background-color: rgb(255, 255, 255);
-      width:10px;
-      height:10px;
-      border-radius: 50px;
-      margin-top: -10px;
-      margin-left: 810px;
-    } */
-    /* .dot .dot_name span{
-      background-color: white;
-      width:10px;
-      height:10px;
-      border-radius: 50px;
-      margin-top: -475px;
-      margin-left: 465px;
-    } */
 
 .dot{
   animation: dot 0.7s linear infinite;

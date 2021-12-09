@@ -51,7 +51,6 @@ $(window).on("scroll touchmove", function() {
             $('header #gnb a').css('color', 'rgba(255, 255, 255, 0.61)');
     };
 
-
     if ($(document).scrollTop() > $("#slogan").position().top -200) {
             $('.sl_p_one').addClass('animate_moveup');
     };
@@ -77,9 +76,7 @@ $(window).on("scroll touchmove", function() {
     if ($(document).scrollTop() > $(".profile_Section").position().top -900) {
         $('header .ico a').css('color', 'black');
         $('header #gnb a').css('color', ' rgba(0, 0, 0, 0.7)');
-        // $('h2').addClass('animate_moveup');
     };
-    
     if ($(document).scrollTop() > $(".profile_Section").position().top - 200) {
         $('body').css('background', 'white');
         $('header').css('color', ' rgba(0, 0, 0, 0.7)');
@@ -90,33 +87,34 @@ $(window).on("scroll touchmove", function() {
         $('.profile_title').addClass('animate_moveup');
         $('.me').addClass('animate_fadein');
     };
-    // if ($(document).scrollTop() > $(".profile_Section").position().top + 0) {
-    //     $('.profile_title').addClass('animate_moveup');
-    //     $('.me').addClass('animate_fadein');
-    // };
-    if ($(document).scrollTop() > $(".profile_Section").position().top +10) {
+    if ($(document).scrollTop() > $(".profile_Section").position().top +20) {
         $('.learn').addClass('animate_moveup');
     };
     if ($(document).scrollTop() > $(".profile_Section").position().top +60) {
         $('.positive').addClass('animate_moveup');
     };
-    if ($(document).scrollTop() > $(".profile_Section").position().top +120) {
+    if ($(document).scrollTop() > $(".profile_Section").position().top +100) {
         $('.gradual').addClass('animate_moveup');
     };
 
     if ($(document).scrollTop() > $(".skill").position().top -700) {
         $('h2').addClass('animate_moveup');
+        
     };
     if ($(document).scrollTop() > $(".skill").position().top -300) {
         $('.chart').addClass('animate_fadein');
+        $('.outer.html').css("stroke-dashoffset", "0");
+        $('.outer.html').css("animation", "show100 2s");
+        $('.outer.css').css("stroke-dashoffset", "90");
+        $('.outer.css').css("animation", "show80 2s");
+        $('.outer.javascript').css("stroke-dashoffset", "220");
+        $('.outer.javascript').css("animation", "show70 2s");
+        $('.outer.illustrator').css("stroke-dashoffset", "0");
+        $('.outer.illustrator').css("animation", "show100 2s");
+        $('.outer.photoshop').css("stroke-dashoffset", "50");
+        $('.outer.photoshop').css("animation", "show90 2s");
     };
-    // if ($(document).scrollTop() > $(".work_all").position().top - 700) {
-  
-    //     $('.up img').addClass('upani');
-    //     $('.caremate img').addClass('caremateani');
-    //     $('.doodle img').addClass('doodleani');
-    //     $('.roudding img').addClass('rouddingani');
-    // };
+
     if ($(document).scrollTop() > $(".contact").position().top - 200) {
         $('body').css('background', 'black');
         $('.work_dots a').removeClass('toblack');
@@ -127,20 +125,6 @@ $(window).on("scroll touchmove", function() {
 
 
 
-// $(function () {
-//     var $slogan = $('.slogan_Section');
-
-//     var $offset = 700;
-//     var $sloganPageOST = $slogan.offset().top - $offset;
-
-//     $(window).scroll(function () {
-//         if ($(this).scrollTop() > $sloganPageOST) {
-//             $slogan.find('.slogan_Section').addClass('animate_moveup');
-//         }
-       
-//     });
-
-// });
 jQuery(document).ready(function ($) {
 
     $(".scroll").click(function (event) {
